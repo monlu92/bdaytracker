@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <title>Birthdays</title>
+    <meta charset="utf-8"/>
+    {% load staticfiles %}
+    <link rel='stylesheet' href="{% static 'css/bootstrap.min.css' %}" type='text/css'/>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href="{% static 'css/birthdays.css' %}"/>
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body pt-5" style="background-color:#f6f6f6">
+        <div class="container-fluid" style="min-height:95%; ">
+            <div class="row d-flex justify-content-center">
+                <br>
+                <center>
+                    <h2>{% include "birthdays/includes/title.html" %}</h2>
+                    <img src="{% static 'img/cake.png' %}" class="img-fluid img-thumbnail" style='max-height:100px;' alt="Responsive image">
+                    <br>
+                </center>
+            </div>
+
+            <hr>
+            <div class="container-fluid" style="background-color:#212121">
+                <ul class="nav flex-column nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href='/'>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href='/birthdays/'>Birthdays</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href='/new/'>Save a new birthday</a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="row">
+                <div class='container-fluid'>
+                <br><br>
+                    {% block content %}
+                    {% endblock %}	
+                </div>
+            </div> 
+        </div>
+        <footer>
+            <div class="container-fluid" style='margin-left:15px'>
+                <p>Never forget a birthday!</p>
+            </div>
+        </footer>
+</body>
+
+</html>

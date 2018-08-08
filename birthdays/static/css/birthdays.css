@@ -1,0 +1,21 @@
+
+
+h2 {
+    color: #191919;
+    font-family: 'Lobster';
+}
+
+h5 {
+    color: #191919;
+    font-family: 'Lobster';
+}
+
+a {
+    color: #a5a5a5;
+    font-family: 'Lobster';
+}
+
+a:hover {
+    color: #fcff63;
+    font-family: 'Lobster';
+}

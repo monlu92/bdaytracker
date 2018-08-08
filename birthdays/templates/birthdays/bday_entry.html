@@ -1,0 +1,16 @@
+{% extends "birthdays/header.html" %}
+
+{% block content %}
+
+<div class='container-fluid' style='margin-top:15px'>    
+    <div class="row d-flex justify-content-center">
+        <form action="{% url 'save_new' %}" method="POST" class="post-form">{% csrf_token %}
+            {{ form.errors }}
+            {{ form.bday_name }}
+            {{ form.bday_date }}
+            <button type="submit" class="btn btn-dark">Save Birthday</button>
+        </form>
+    </div>
+</div>
+ 
+{% endblock %} 

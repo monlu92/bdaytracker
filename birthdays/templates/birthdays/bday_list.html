@@ -1,0 +1,16 @@
+{% extends "birthdays/header.html" %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center">
+    <h5>List of Birthdays</h5>
+</div>
+<br>
+<div class="row d-flex justify-content-center">
+    {% for entry in entries %}
+        {{ entry }}
+        <br>
+    {% endfor %}
+</div>
+
+{% endblock %}

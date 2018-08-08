@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+dist/
+lib/
+lib64/
+build/
+env/
